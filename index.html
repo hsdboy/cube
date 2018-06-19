@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        .box{
+            width: 400px;
+            height:400px;
+            position: absolute;
+            left: 0;
+            right:0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: #2f2f2f;
+        }
+        .demo{
+            transform: rotateY(45deg) rotateX(45deg);
+            transform-style:preserve-3d ;
+            margin: 150px;
+            width: 100px;
+            height: 100px;
+        }
+
+
+        .box:hover .demo{
+            animation: rotate 2s linear infinite;
+        }
+        @keyframes  rotate {
+            0%{
+                transform: rotateY(0) rotateX(0);
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.5 ;
+            box-shadow:0 0 2px 2px;
+            border: 1px solid #f2f2f2;
+        }
+        .item:nth-child(1){
+            background: #007aff;
+            transform: translateX(50px) rotateY(90deg);
+        }
+        .item:nth-child(2){
+            background: #00f4ff;
+            transform: translateX(-50px) rotatey(90deg);
+        }
+        .item:nth-child(3){
+            background: #f4bc51;
+            transform: translateY(50px) rotatex(90deg);
+        }
+        .item:nth-child(4){
+             background: #f44c51;
+             transform: translatey(-50px) rotatex(90deg);
+         }
+        .item:nth-child(5){
+              background: #000000;
+              transform: translatez(50px);
+          }
+        .item:nth-child(6){
+            background: #ffffff;
+            transform: translatez(-50px);
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="box">
+    <div class="demo">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</div>
+</body>
+</html>
